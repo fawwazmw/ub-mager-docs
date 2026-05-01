@@ -1,0 +1,11 @@
+meta {
+  name: Daily Revenue
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/analytics/revenue/daily?days=7
+  body: none
+  auth: inherit
+}
