@@ -1,0 +1,11 @@
+meta {
+  name: Get Active Ride
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/rides/active
+  body: none
+  auth: inherit
+}

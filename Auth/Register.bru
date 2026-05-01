@@ -1,0 +1,28 @@
+meta {
+  name: Register
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/auth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "full_name": "Ahmad Passenger",
+    "phone": "+6281234567890",
+    "email": "ahmad@example.com",
+    "password": "SecurePass123!",
+    "role": "PASSENGER"
+  }
+}
+
+script:post-response {
+  if (res.body.success) {
+    bru.setVar("access_token", res.body.data.access_token);
+    bru.setEnvVar("access_token", res.body.data.access_token);
+  }
+}

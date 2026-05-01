@@ -1,0 +1,19 @@
+meta {
+  name: Demand Prediction
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/analytics/demand/predict
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "latitude": -7.9666,
+    "longitude": 112.6326,
+    "time_range_hours": 4
+  }
+}

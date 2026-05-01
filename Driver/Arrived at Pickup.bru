@@ -1,0 +1,16 @@
+meta {
+  name: Arrived at Pickup
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/rides/:id/arrived
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  }
+}

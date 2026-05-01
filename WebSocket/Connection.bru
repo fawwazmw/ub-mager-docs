@@ -1,0 +1,25 @@
+meta {
+  name: Connection
+  type: http
+  seq: 1
+}
+
+# WebSocket Connection Reference
+#
+# Connect to: {{ws_url}}
+#
+# Authentication:
+#   Pass access_token as query parameter:
+#   {{ws_url}}?token={{access_token}}
+#
+# Events (Driver → Server):
+#   - location_update: { lat, lng, heading }
+#   - status_change: { status: "ONLINE" | "OFFLINE" }
+#
+# Events (Server → Client):
+#   - ride_request: { ride_id, pickup, dropoff, fare }
+#   - ride_cancelled: { ride_id, reason }
+#   - driver_location: { driver_id, lat, lng, heading }
+#
+# Note: Bruno does not natively support WebSocket.
+# Use a WebSocket client (e.g., wscat, Postman) for testing.

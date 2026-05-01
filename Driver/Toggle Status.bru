@@ -1,0 +1,17 @@
+meta {
+  name: Toggle Status
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/drivers/me/status
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "status": "ONLINE"
+  }
+}

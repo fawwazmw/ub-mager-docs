@@ -1,0 +1,21 @@
+meta {
+  name: Register Driver
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/drivers/register
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "vehicle_type": "MOTORCYCLE",
+    "vehicle_plate": "N 1234 AB",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Vario 150",
+    "license_number": "SIM-123456"
+  }
+}

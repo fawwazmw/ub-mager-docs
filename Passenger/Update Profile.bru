@@ -1,0 +1,18 @@
+meta {
+  name: Update Profile
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url}}/users/me
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "full_name": "Ahmad Updated",
+    "email": "ahmad.updated@example.com"
+  }
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Get Driver Profile
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/drivers/me
+  body: none
+  auth: inherit
+}

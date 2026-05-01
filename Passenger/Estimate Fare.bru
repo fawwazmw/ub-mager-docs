@@ -1,0 +1,20 @@
+meta {
+  name: Estimate Fare
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/rides/estimate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "pickup_lat": -7.9666,
+    "pickup_lng": 112.6326,
+    "dropoff_lat": -7.9784,
+    "dropoff_lng": 112.6308
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Update Location
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/drivers/me/location
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "latitude": -7.9666,
+    "longitude": 112.6326,
+    "heading": 180.0
+  }
+}
