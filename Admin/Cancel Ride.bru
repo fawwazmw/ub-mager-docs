@@ -1,0 +1,21 @@
+meta {
+  name: Cancel Ride
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{base_url}}/admin/rides/:id/cancel
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: {{ride_id}}
+}
+
+body:json {
+  {
+    "reason": "Cancelled by admin"
+  }
+}

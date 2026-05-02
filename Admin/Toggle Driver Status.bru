@@ -1,0 +1,21 @@
+meta {
+  name: Toggle Driver Status
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{base_url}}/admin/drivers/:id/status
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: {{driver_id}}
+}
+
+body:json {
+  {
+    "is_online": true
+  }
+}
