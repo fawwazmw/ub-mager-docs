@@ -1,0 +1,15 @@
+meta {
+  name: Recent Activity
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{base_url}}/admin/activity?limit=20
+  body: none
+  auth: inherit
+}
+
+params:query {
+  limit: 20
+}

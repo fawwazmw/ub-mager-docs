@@ -1,0 +1,11 @@
+meta {
+  name: Bulk Cancel Stuck Rides
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{base_url}}/admin/rides/bulk-cancel
+  body: none
+  auth: inherit
+}
