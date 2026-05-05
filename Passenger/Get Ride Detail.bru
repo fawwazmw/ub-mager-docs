@@ -1,0 +1,15 @@
+meta {
+  name: Get Ride Detail
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{base_url}}/rides/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: {{ride_id}}
+}

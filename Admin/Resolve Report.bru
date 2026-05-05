@@ -1,0 +1,22 @@
+meta {
+  name: Resolve Report
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{base_url}}/admin/reports/:id/resolve
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: {{report_id}}
+}
+
+body:json {
+  {
+    "status": "RESOLVED",
+    "admin_note": "Warned the driver about behavior"
+  }
+}

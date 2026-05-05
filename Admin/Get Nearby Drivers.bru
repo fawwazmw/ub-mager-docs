@@ -1,0 +1,11 @@
+meta {
+  name: Get Nearby Drivers
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{base_url}}/admin/drivers/nearby?lat=-7.9526&lng=112.6146&radius=5&limit=10
+  body: none
+  auth: inherit
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Unsuspend User
+  type: http
+  seq: 17
+}
+
+put {
+  url: {{base_url}}/admin/users/:id/unsuspend
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: {{user_id}}
+}
