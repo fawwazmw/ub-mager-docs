@@ -1,0 +1,15 @@
+meta {
+  name: Cancel Task
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base_url}}/tasks/:id/cancel
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: {{task_id}}
+}

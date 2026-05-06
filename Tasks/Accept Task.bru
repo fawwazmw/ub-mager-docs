@@ -1,0 +1,15 @@
+meta {
+  name: Accept Task
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/tasks/:id/accept
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: {{task_id}}
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Update Task Status
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/tasks/:id/status
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: {{task_id}}
+}
+
+body:json {
+  {
+    "status": "PICKING_UP"
+  }
+}

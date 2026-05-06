@@ -1,0 +1,29 @@
+meta {
+  name: Create Task
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/tasks
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "category": "JASTIP_MAKANAN",
+    "title": "Jastip Mie Gacoan Soehat",
+    "description": "Tolong beliin mie gacoan level 3 + es teh, ambil di Soehat ya",
+    "fee": 5000,
+    "pickup_lat": -7.9566,
+    "pickup_lng": 112.6150,
+    "pickup_address": "Mie Gacoan Soehat",
+    "pickup_zone": "OTHER",
+    "delivery_lat": -7.9526,
+    "delivery_lng": 112.6146,
+    "delivery_address": "FILKOM UB Gedung F",
+    "delivery_zone": "FILKOM",
+    "notes": "Pake level 3 ya, ga pake sayur"
+  }
+}

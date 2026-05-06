@@ -1,0 +1,11 @@
+meta {
+  name: My Helper Tasks
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/tasks/helping?page=1&per_page=20
+  body: none
+  auth: inherit
+}
