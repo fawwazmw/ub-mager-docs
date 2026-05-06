@@ -1,0 +1,21 @@
+meta {
+  name: Send Message
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/rides/:id/messages
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: {{ride_id}}
+}
+
+body:json {
+  {
+    "content": "I'm at the blue gate near the parking lot"
+  }
+}
